@@ -25,3 +25,19 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - `pnpm --filter @workspace/api-server run dev` — run API server locally
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+
+## Artifacts
+
+### vertex-lyceum (Web — Official Landing Page)
+- **Purpose**: Official website for TATU Akademik Litsey (Muhammad al-Xorazmiy nomidagi TATU academic lyceum, Tashkent)
+- **Stack**: React + Vite, Tailwind CSS, Framer Motion, next-themes
+- **Features**:
+  - 3-language support: Uzbek (UZ), English (EN), Russian (RU) via `LanguageContext`
+  - Dark/Light mode via `next-themes` ThemeProvider
+  - Sections: Hero, Stats, About, Mission, Facilities, Programs, Activities, Achievements, Graduation Stats, Why TATU Litsey, Admission Process, Social Media, Contact, Footer
+  - Social links: Telegram (@tatu_akademik_litseyi), Instagram (@tatu_lyceum), Facebook (tatu_akademik_litsey)
+- **Key files**:
+  - `src/i18n/index.ts` — all translations for uz/en/ru
+  - `src/contexts/LanguageContext.tsx` — language state
+  - `src/pages/Home.tsx` — main page
+  - `src/App.tsx` — ThemeProvider + LanguageProvider setup
